@@ -21,10 +21,16 @@ function App() {
 		<>
 			<h1>{advice}</h1>
 			<button onClick={getAdvice}>Get Advise</button>
-			<p>
-				You have read <strong>{count}</strong> pieces of advice.
-			</p>
+			<Message count={count} />
 		</>
+	);
+}
+
+function Message({ count }) {
+	return (
+		<p>
+			You have read <strong>{count}</strong> pieces of advice.
+		</p>
 	);
 }
 
